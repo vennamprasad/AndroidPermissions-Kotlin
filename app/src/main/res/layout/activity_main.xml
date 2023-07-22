@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/action_media_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Image/Camera/Videos/Audios"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Space
+        android:id="@+id/space"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        app:layout_constraintEnd_toEndOf="@id/action_media_picker"
+        app:layout_constraintStart_toStartOf="@id/action_media_picker"
+        app:layout_constraintTop_toBottomOf="@+id/action_media_picker" />
+
+    <Button
+        android:id="@+id/action_pdfs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PDF"
+        app:layout_constraintEnd_toEndOf="@+id/action_media_picker"
+        app:layout_constraintStart_toStartOf="@+id/action_media_picker"
+        app:layout_constraintTop_toBottomOf="@+id/space" />
+
+    <TextView
+        android:id="@+id/selected_file"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:paddingVertical="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/action_pdfs" />
+
+    <VideoView
+        android:id="@+id/selected_video"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/action_media_picker"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <MediaController
+        android:id="@+id/selected_Audio"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/action_media_picker"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/selected_image"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:adjustViewBounds="true"
+        android:paddingVertical="20dp"
+        android:visibility="gone"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/action_media_picker"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+</androidx.constraintlayout.widget.ConstraintLayout>
