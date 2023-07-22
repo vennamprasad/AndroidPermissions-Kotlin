@@ -33,7 +33,7 @@ import com.permissionx.guolindev.PermissionX;
 
 import java.io.File;
 
-public class MainActivity extends AppCompatActivity implements StyledPlayerView.ControllerVisibilityListener {
+public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = MainActivity.class.getSimpleName();
     private static final int REQUEST_IMAGE_PICK = 1;
@@ -303,10 +303,5 @@ public class MainActivity extends AppCompatActivity implements StyledPlayerView.
             return filePathInLowerCase.endsWith(".pdf");
         }
         return false;
-    }
-
-    @Override
-    public void onVisibilityChanged(int visibility) {
-
     }
 }
